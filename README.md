@@ -65,7 +65,9 @@ top 3 closest words to juice...
 #Future work 
 
 -Make clean interface for neural network layers (implement function like backprop, get_output)
+
 -Make clean interface for neural networks (implement functions like feed_forward, backprop)
+
 -Optimize negative sampling backprop (only update a subset of output vectors to speed things up)
 
 
