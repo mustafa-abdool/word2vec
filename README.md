@@ -39,19 +39,28 @@ You can use visualizationhelper.py to print out the "closest" words to a given w
 #Examples 
 
 top 3 closest words to apple...
-orange: 0.696907523086
-eat: 0.410704152037
-juice: 0.34930571934
+
+1.) orange: 0.696907523086
+
+2.) eat: 0.410704152037
+
+3.) juice: 0.34930571934
 
 top 3 closest words to drink...
-orange: 0.33042096028
-apple: 0.204528996874
-rice: 0.0259775283778
+
+1.) orange: 0.33042096028
+
+2.) apple: 0.204528996874
+
+3.) rice: 0.0259775283778
 
 top 3 closest words to juice...
-water: 0.303744738162
-drink: 0.289949206689
-orange: 0.106262570786
+
+1.) water: 0.303744738162
+
+2.) drink: 0.289949206689
+
+3.) orange: 0.106262570786
 
 #Future work 
 
