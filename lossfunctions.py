@@ -1,3 +1,5 @@
+#Implementation of softmax and negative sampling loss functions 
+
 import math
 from util import generate_one_hot_encoding, get_k_neg_samples
 import numpy as np

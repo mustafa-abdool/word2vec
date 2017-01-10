@@ -1,8 +1,9 @@
+#Implementation of two simple types of neural networks to generate embeddings via word2vec
+
 import numpy as np
 
-
-#works for skipgram and cbow - no need to distinguish between them
-#Has one hidden layer
+#Neural network architecture used to generate embeddings via the loss function
+#that comes with negative sampling 
 class NegativeSampleNeuralNet:
 
 	 def __init__(self, input_size, network_type="CBOW", num_context_words = 2.0, learning_rate = 0.1, hidden_layer_size = 4):
@@ -66,6 +67,8 @@ class NegativeSampleNeuralNet:
 
 
 #simple neural net used for word2vec. Has one hidden layer and softmax output layer
+#the loss function just tries to maximize p(input word | context)
+#can work for both CBOW and Skipgram models
 class SimpleNeuralNet:
 
 	 def __init__(self, input_size, num_context_words, network_type="CBOW", learning_rate = 0.1, hidden_layer_size = 4):

@@ -4,9 +4,11 @@ from neuralnetworktrainer import train_embedding_softmax,train_embbedding_neg_sa
 from training_example_helper import get_test_training_data,get_training_data_from_text_file
 from util import get_vocab_from_training_examples, get_weights_for_sampling
 from visualizationhelper import nearest_neighbor
-
 import math
 
+#Main file for generating neural network embeddings using word2vec
+#Creates a simple neural network and outputs the nearest neighbors to some
+#common words
 
 #can try get_training_data_from_text_file("text_sample.txt") for a bigger file
 training_examples = get_test_training_data(corpus_type="CBOW")
@@ -21,7 +23,7 @@ nearest_neighbor('apple',nn.get_embedding_matrix(),vocab_dict, reverse_vocab_dic
 nearest_neighbor('drink',nn.get_embedding_matrix(),vocab_dict, reverse_vocab_dict)
 nearest_neighbor('juice',nn.get_embedding_matrix(),vocab_dict, reverse_vocab_dict)
 
-#negative sampling example
+#negative sampling example:
 
 """
 nn = NegativeSampleNeuralNet(vocab_size,num_context_words=5.0,hidden_layer_size = 30, learning_rate = 0.1)

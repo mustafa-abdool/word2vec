@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def print_dictionary_top_k_helper(mydict, limit):
 	k = 1
 	for key, value in sorted(mydict.iteritems(), key=lambda (k,v): (v,k), reverse=True):
@@ -11,7 +12,7 @@ def print_dictionary_top_k_helper(mydict, limit):
 #prints out the top 3 nearest neighbors for a given word using cosine distance
 def nearest_neighbor(word, hidden_weight_matrix,vocab_dict, reverse_vocab_dict):
 	word_vector = hidden_weight_matrix[vocab_dict[word]]
-	#go through all the rows and put in a dictionary ?
+	#go through all the rows and put in a dictionary
 	#then sort dictionary by value 
 	score_dict = {}
 	for row_idx in range(0,hidden_weight_matrix.shape[0]):

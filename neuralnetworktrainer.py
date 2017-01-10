@@ -1,12 +1,10 @@
 from lossfunctions import compute_training_set_loss, compute_training_set_loss_negative_sampling
 from util import generate_one_hot_encoding, get_k_neg_samples
 
-#File with methods for training a neural network for word2vec
-#Either uses the softtmax or skip gram
+#Methods to train a neural network based on either softmax output layer or
+#using negative sampling. Negative sampling is faster in general as softmax
+#is expensive to compute once the vocabulary gets large
 
-
-#get training examples and then call these functions !!
-#return embedding matrix
 def train_embedding_softmax(nn,training_examples,vocab_dict,num_iterations=20000):
 	#print the loss function before you start 
 	compute_training_set_loss(training_examples,nn,vocab_dict)
